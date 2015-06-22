@@ -12,7 +12,7 @@
 	</parent>
 	<name>Cinematographer Tickets Service Rest</name>
 	<artifactId>cinematographer-rest</artifactId>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	
 	<dependencies>
 	
@@ -29,5 +29,19 @@
 		</dependency>
 	
 	</dependencies>
+    
+    <build>
+	    <plugins>
+	    
+	        <plugin>
+	            <artifactId>maven-compiler-plugin</artifactId>
+	            <configuration>
+	                <source>1.7</source>
+	                <target>1.7</target>
+	            </configuration>
+	        </plugin>
+	        
+	    </plugins>
+    </build>
 
 </project>
