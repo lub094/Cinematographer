@@ -1,4 +1,4 @@
-package com.cinematographer.core.movies;
+package com.cinematographer.core.screening;
 
 import java.util.Collection;
 import javax.persistence.Entity;

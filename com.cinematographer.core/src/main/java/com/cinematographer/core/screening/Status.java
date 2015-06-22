@@ -1,4 +1,4 @@
-package com.cinematographer.core.movies;
+package com.cinematographer.core.screening;
 
 public enum Status {
 	FREE, RESERVED, SOLD;
