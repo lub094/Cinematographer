@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <servlet>
+        <display-name>Cinematographer RESTful Application</display-name>
+        <servlet-name>CinematographerRest</servlet-name>
+        <init-param>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>com.cinematographer.rest.Bootstrap</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>com.cinematographer.rest.Bootstrap</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+</web-app>

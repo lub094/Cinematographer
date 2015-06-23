@@ -20,7 +20,7 @@ import org.junit.Test;
 import com.cinematographer.core.DatabaseTest;
 import com.cinematographer.core.screening.Screening;
 import com.cinematographer.core.screening.Seat;
-import com.cinematographer.core.screening.manager.ScreeningService;
+import com.cinematographer.core.screening.service.ScreeningService;
 
 public class ScreeningServiceTest extends DatabaseTest {
 

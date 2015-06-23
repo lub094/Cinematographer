@@ -7,14 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "SCREENING")
 public class Screening {
 
 	@Id
-	@NotNull
 	private String title;
 	private Time startTime;
 	private Time duration;

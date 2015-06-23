@@ -1,4 +1,4 @@
-package com.cinematographer.core.screening.manager;
+package com.cinematographer.core.screening.service;
 
 import java.util.Collection;
 

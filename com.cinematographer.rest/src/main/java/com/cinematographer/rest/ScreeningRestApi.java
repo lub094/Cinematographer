@@ -1,5 +1,7 @@
 package com.cinematographer.rest;
 
+import static javax.ws.rs.core.Response.Status.INTERNAL_SERVER_ERROR;
+
 import java.util.Collection;
 
 import javax.ws.rs.Consumes;
@@ -15,7 +17,7 @@ import javax.ws.rs.core.Response.Status;
 import com.cinematographer.core.manager.IServiceManager;
 import com.cinematographer.core.manager.ServiceManager;
 import com.cinematographer.core.screening.Screening;
-import com.cinematographer.core.screening.manager.IScreeningService;
+import com.cinematographer.core.screening.service.IScreeningService;
 import com.cinematographer.core.utils.JsonUtils;
 import com.cinematographer.rest.utils.ResponseHelper;
 
@@ -63,8 +65,7 @@ public class ScreeningRestApi {
 			return ResponseHelper.createResponse(Status.OK);
 		} catch (Exception e) {
 			// TODO: Catch conflict exceptions
-			return ResponseHelper.createResponse(Status.INTERNAL_SERVER_ERROR,
-					e);
+			return ResponseHelper.createResponse(INTERNAL_SERVER_ERROR, e);
 		}
 	}
 

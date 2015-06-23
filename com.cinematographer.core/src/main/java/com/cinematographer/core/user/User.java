@@ -7,14 +7,12 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.validation.constraints.NotNull;
 
 import com.cinematographer.core.screening.Reservation;
 
 @Entity
 public class User {
 	@Id
-	@NotNull
 	private String name;
 	private String password;
 	@OneToMany
