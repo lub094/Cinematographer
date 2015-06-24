@@ -21,6 +21,7 @@ public class DatabaseTest {
 		transaction.begin();
 		em.createQuery("DELETE FROM Screening s").executeUpdate();
 		em.createQuery("DELETE FROM Seat s").executeUpdate();
+                //em.createQuery("DELETE FROM User s").executeUpdate();
 		transaction.commit();
 	}
 

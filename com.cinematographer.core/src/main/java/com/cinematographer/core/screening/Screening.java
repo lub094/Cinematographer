@@ -7,33 +7,45 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+
 
 @Entity
 @Table(name = "SCREENING")
 public class Screening {
 
 	@Id
+	@NotNull
 	private String title;
 	private Time startTime;
-	private Time duration;
+	private Integer duration;
 	@OneToMany
 	private Collection<Seat> seats;
 	private Integer hall;
+        private Double prise;
 
 	public Screening() {
 
 	}
 
-	public Screening(String title, Time startTime, Time duration,
-			Collection<Seat> seats, int hall) {
+	public Screening(String title, Time startTime, Integer duration,
+			Collection<Seat> seats, int hall, double prise) {
 		this.title = title;
 		this.startTime = startTime;
 		this.duration = duration;
 		this.seats = seats;
 		this.hall = hall;
+                this.prise = prise;
 	}
 
-	public Time getDuration() {
+        public Double getPrise()
+        {
+            return prise;
+        }       
+        
+
+	public Integer getDuration() {
 		return duration;
 	}
 
@@ -53,7 +65,12 @@ public class Screening {
 		return startTime;
 	}
 
-	public void setDuration(Time duration) {
+        public void setPrise(Double prise)
+        {
+            this.prise = prise;
+        }      
+        
+	public void setDuration(Integer duration) {
 		this.duration = duration;
 	}
 
@@ -84,6 +101,7 @@ public class Screening {
 		result = prime * result
 				+ ((startTime == null) ? 0 : startTime.hashCode());
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
+                result = prime * result + ((prise == null) ? 0 : prise.hashCode());
 		return result;
 	}
 
@@ -120,6 +138,11 @@ public class Screening {
 			if (other.title != null)
 				return false;
 		} else if (!title.equals(other.title))
+			return false;
+                if (prise == null) {
+			if (other.prise != null)
+				return false;
+		} else if (!prise.equals(other.prise))
 			return false;
 		return true;
 	}

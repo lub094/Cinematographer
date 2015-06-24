@@ -26,15 +26,16 @@ public class ScreeningServiceTest extends DatabaseTest {
 
 	private static final String TEST_TITLE = "Title";
 
-	private static final Time TEST_DURATION = new Time(1000 * 60 * 120);
+	private static final Integer TEST_DURATION = 163;
 	private static final int TEST_HALL = 11;
+        private static final double TEST_PRISE = 8.5;
 	private static final Time TEST_START_TIME = new Time(12341204812L);
 	private static final Seat TEST_SEATS[] = { new Seat("0", false, FREE),
 			new Seat("1", false, FREE), new Seat("2", true, RESERVED),
 			new Seat("3", true, RESERVED) };
 	private static final Screening TEST_SCREENING = new Screening(TEST_TITLE,
 			TEST_START_TIME, TEST_DURATION, Arrays.asList(TEST_SEATS),
-			TEST_HALL);
+			TEST_HALL,TEST_PRISE);
 
 	private ScreeningService classUnderTest;
 
