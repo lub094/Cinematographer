@@ -21,7 +21,7 @@ import com.cinematographer.core.screening.service.IScreeningService;
 import com.cinematographer.core.utils.JsonUtils;
 import com.cinematographer.rest.utils.ResponseHelper;
 
-@Path("/screening")
+@Path("/screenings")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class ScreeningRestApi {
