@@ -19,10 +19,11 @@ public class DatabaseTest {
 		EntityTransaction transaction = em.getTransaction();
 
 		transaction.begin();
+		em.createQuery("DELETE FROM Reservation r").executeUpdate();
 		em.createQuery("DELETE FROM Screening s").executeUpdate();
-		em.createQuery("DELETE FROM Seat s").executeUpdate();
-                //em.createQuery("DELETE FROM User s").executeUpdate();
+		em.createQuery("DELETE FROM UserProfile u").executeUpdate();
 		transaction.commit();
+		em.close();
 	}
 
 	private EntityManagerFactory createEntityManagerFactory() {

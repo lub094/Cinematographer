@@ -9,25 +9,14 @@ package com.cinematographer.core.exceptions;
  *
  * @author Aleksandar
  */
-public class InvalidUserException extends RuntimeException
-{
+public class InvalidUserException extends RuntimeException {
 
-    /**
-     * Creates a new instance of <code>InvalidUser</code> without detail
-     * message.
-     */
-    public InvalidUserException()
-    {
-    }
+	private static final long serialVersionUID = 6478427511766868942L;
 
-    /**
-     * Constructs an instance of <code>InvalidUser</code> with the specified
-     * detail message.
-     *
-     * @param msg the detail message.
-     */
-    public InvalidUserException(String msg)
-    {
-        super(msg);
-    }
+	public InvalidUserException() {
+	}
+
+	public InvalidUserException(String msg) {
+		super(msg);
+	}
 }

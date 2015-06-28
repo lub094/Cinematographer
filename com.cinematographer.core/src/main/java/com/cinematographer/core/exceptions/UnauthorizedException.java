@@ -9,25 +9,14 @@ package com.cinematographer.core.exceptions;
  *
  * @author Aleksandar
  */
-public class UnauthorizedException extends RuntimeException
-{
+public class UnauthorizedException extends RuntimeException {
 
-    /**
-     * Creates a new instance of <code>UnauthrizedException</code> without
-     * detail message.
-     */
-    public UnauthorizedException()
-    {
-    }
+	private static final long serialVersionUID = -5014229468088620784L;
 
-    /**
-     * Constructs an instance of <code>UnauthrizedException</code> with the
-     * specified detail message.
-     *
-     * @param msg the detail message.
-     */
-    public UnauthorizedException(String msg)
-    {
-        super(msg);
-    }
+	public UnauthorizedException() {
+	}
+
+	public UnauthorizedException(String msg) {
+		super(msg);
+	}
 }

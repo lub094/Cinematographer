@@ -1,19 +1,22 @@
 package com.cinematographer.core.screening;
 
-import javax.persistence.Entity;
+import javax.persistence.Embeddable;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.Id;
 
-@Entity
+@Embeddable
 public class Seat {
-	@Id
 	private String number;
 	private boolean wasUsed;
 	@Enumerated(EnumType.STRING)
 	private Status status;
 
 	public Seat() {
+
+	}
+
+	public Seat(String number) {
+		this(number, false, Status.FREE);
 	}
 
 	public Seat(String number, boolean wasUsed, Status status) {

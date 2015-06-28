@@ -6,10 +6,10 @@
 
 	<persistence-unit name="com.cinematographer.jpa" transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-		<class>com.cinematographer.core.screening.Reservation</class>
+		<class>com.cinematographer.core.reservation.Reservation</class>
 		<class>com.cinematographer.core.screening.Screening</class>
 		<class>com.cinematographer.core.screening.Seat</class>
-		<class>com.cinematographer.core.user.User</class>
+		<class>com.cinematographer.core.user.UserProfile</class>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		
 		<properties>

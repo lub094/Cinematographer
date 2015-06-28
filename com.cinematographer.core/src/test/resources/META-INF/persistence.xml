@@ -6,10 +6,10 @@
 
 	<persistence-unit name="com.cinematographer.test-db" transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-		<class>com.cinematographer.core.screening.Reservation</class>
+		<class>com.cinematographer.core.reservation.Reservation</class>
 		<class>com.cinematographer.core.screening.Screening</class>
 		<class>com.cinematographer.core.screening.Seat</class>
-		<class>com.cinematographer.core.user.User</class>
+		<class>com.cinematographer.core.user.UserProfile</class>
 		<properties>
 			<!-- Using in-memory DB for testing -->
 			<property name="javax.persistence.jdbc.url" value="jdbc:derby:memory:test-db;create=true"/>
