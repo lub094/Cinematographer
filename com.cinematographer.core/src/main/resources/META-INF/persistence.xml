@@ -13,10 +13,10 @@
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		
 		<properties>
-			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/Cinematographer;create=true" />
-			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/cinematographer;create=true" />
 			<property name="eclipselink.ddl-generation.output-mode" value="database" />
+			<property name="javax.persistence.jdbc.user" value="app"/>
 		</properties>
 	</persistence-unit>
 

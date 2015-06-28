@@ -1,4 +1,4 @@
-package com.cinematographer.rest;
+package com.cinematographer.rest.services;
 
 import com.cinematographer.core.manager.IServiceManager;
 import com.cinematographer.core.manager.ServiceManager;

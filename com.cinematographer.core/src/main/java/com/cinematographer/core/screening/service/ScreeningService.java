@@ -29,8 +29,10 @@ public class ScreeningService implements IScreeningService {
 
 	public Collection<Screening> getAllScreenings() {
 		EntityManager em = emf.createEntityManager();
-		return em.createQuery(GET_ALL_SCREENINGS_QUERY, Screening.class)
-				.getResultList();
+		List<Screening> screenings = em.createQuery(GET_ALL_SCREENINGS_QUERY,
+				Screening.class).getResultList();
+		em.close();
+		return screenings;
 	}
 
 	public void addScreening(Screening screening) {

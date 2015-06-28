@@ -1,4 +1,4 @@
-package com.cinematographer.rest;
+package com.cinematographer.rest.services;
 
 import static javax.ws.rs.core.Response.Status.INTERNAL_SERVER_ERROR;
 
