@@ -1,0 +1,23 @@
+<core:View
+	controllerName="com.cinematographer.view.Application"
+	xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" >
+	<VBox>
+		<Bar>
+			<contentMiddle>
+				<Button text="Screenings" press="showScreenings" />
+				<Button text="Reservations" />
+			</contentMiddle>
+		</Bar>
+		<NavContainer id="navContainer" 
+      				  class="navContainerControl sapUiSmallMarginBottom">
+			<Page id="screenings">
+				<Text text="sometext"></Text>
+			</Page>
+			<Page id="reservations">
+				<Text text="reservations"></Text>
+			</Page>
+		</NavContainer>
+	</VBox>
+</core:View>
