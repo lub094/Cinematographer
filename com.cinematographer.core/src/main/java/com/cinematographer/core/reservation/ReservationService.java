@@ -17,7 +17,7 @@ import com.cinematographer.core.screening.Seat;
 import com.cinematographer.core.screening.Status;
 import com.cinematographer.core.screening.service.IScreeningService;
 import com.cinematographer.core.user.UserProfile;
-import com.cinematographer.core.user.manager.IUserService;
+import com.cinematographer.core.user.service.IUserService;
 
 public class ReservationService implements IReservationService {
 

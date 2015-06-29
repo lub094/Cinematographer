@@ -12,8 +12,8 @@ import com.cinematographer.core.reservation.IReservationService;
 import com.cinematographer.core.reservation.ReservationService;
 import com.cinematographer.core.screening.service.IScreeningService;
 import com.cinematographer.core.screening.service.ScreeningService;
-import com.cinematographer.core.user.manager.IUserService;
-import com.cinematographer.core.user.manager.UserService;
+import com.cinematographer.core.user.service.IUserService;
+import com.cinematographer.core.user.service.UserService;
 
 @WebListener
 public class BootstrapListener implements ServletContextListener {

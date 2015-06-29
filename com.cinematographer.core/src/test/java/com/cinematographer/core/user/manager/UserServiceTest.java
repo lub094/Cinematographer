@@ -10,6 +10,7 @@ import static com.cinematographer.core.screening.Status.RESERVED;
 
 import com.cinematographer.core.user.Role;
 import com.cinematographer.core.user.UserProfile;
+import com.cinematographer.core.user.service.UserService;
 
 import java.sql.Time;
 import java.util.Arrays;

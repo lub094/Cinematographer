@@ -4,9 +4,10 @@ import com.cinematographer.core.manager.IServiceManager;
 import com.cinematographer.core.manager.ServiceManager;
 import com.cinematographer.core.user.Role;
 import com.cinematographer.core.user.UserProfile;
-import com.cinematographer.core.user.manager.IUserService;
+import com.cinematographer.core.user.service.IUserService;
 import com.cinematographer.core.utils.JsonUtils;
 import com.cinematographer.rest.utils.ResponseHelper;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;

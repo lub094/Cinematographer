@@ -1,4 +1,4 @@
-package com.cinematographer.core.user.manager;
+package com.cinematographer.core.user.service;
 
 import com.cinematographer.core.exceptions.InvalidUserException;
 import com.cinematographer.core.exceptions.UnauthorizedException;

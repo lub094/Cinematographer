@@ -20,8 +20,8 @@ import com.cinematographer.core.screening.service.IScreeningService;
 import com.cinematographer.core.screening.service.ScreeningService;
 import com.cinematographer.core.user.Role;
 import com.cinematographer.core.user.UserProfile;
-import com.cinematographer.core.user.manager.IUserService;
-import com.cinematographer.core.user.manager.UserService;
+import com.cinematographer.core.user.service.IUserService;
+import com.cinematographer.core.user.service.UserService;
 
 public class ReservationServiceTest extends DatabaseTest {
 
