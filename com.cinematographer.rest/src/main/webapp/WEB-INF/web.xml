@@ -14,4 +14,8 @@
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
 -->
+	<context-param>
+		<param-name>com.sap.ui5.resource.DEV_MODE</param-name>
+		<param-value>true</param-value>
+	</context-param>
 </web-app>
