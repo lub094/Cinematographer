@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Jun 28 23:01:38 EEST 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-014e-3bc2-ca80-000001de55c0 
+on database directory memory:C:\Users\blabla\Documents\GitHub\Cinematographer\com.cinematographer.core\test-db with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+Loaded from file:/C:/Users/blabla/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_45-b15
+user.dir=C:\Users\blabla\Documents\GitHub\Cinematographer\com.cinematographer.core
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
