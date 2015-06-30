@@ -42,11 +42,6 @@ public class UserRestAPI {
 			return ResponseHelper.createResponse(Status.FORBIDDEN, e);
 		}
 	}
-	
-	@GET
-	public Response something() {
-		return ResponseHelper.createResponse(Status.OK);
-	}
 
 	@GET
 	@Path("/{name}")
@@ -81,8 +76,7 @@ public class UserRestAPI {
 			IUserService service = getUserService();
 			UserProfile user = JsonUtils.fromJson(payload, UserProfile.class);
 
-			// TODO: Fix authentication
-			// service.authenticate(user.getName(), getPassword());
+			service.authenticate(user.getName(), user.getPassword());
 			return ResponseHelper.createResponse(Response.Status.OK);
 		} catch (Exception e) {
 			return ResponseHelper.createResponse(Status.BAD_REQUEST, e);

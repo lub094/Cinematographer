@@ -20,31 +20,31 @@ public class Screening {
 	private int duration;
 	private int hall;
 	private double price;
-	@ElementCollection(fetch = FetchType.LAZY)
-	private List<Seat> seats;
+	/*@ElementCollection(fetch = FetchType.LAZY)
+	private List<Seat> seats;*/
 
 	public Screening() {
 
 	}
 
-	public Screening(String title, int duration, int hall, List<Seat> seats) {
-		this(title, ""/*new Time(System.currentTimeMillis())*/, duration, hall, 0.0,
-				seats);
+	public Screening(String title, int duration, int hall) { //, List<Seat> seats) {
+		this(title, ""/*new Time(System.currentTimeMillis())*/, duration, hall, 0.0);
+		//, seats);
 	}
 
-	public Screening(String title, int duration, int hall) {
+	/*public Screening(String title, int duration, int hall) {
 		this(title, "", duration, hall, 0.0,
 				new ArrayList<Seat>());
-	}
+	}*/
 
 	public Screening(String title, String startTime, int duration, int hall,
-			double price, List<Seat> seats) {
+			double price) { //, List<Seat> seats) {
 		this.title = title;
 		this.startTime = startTime;
 		this.duration = duration;
 		this.price = price;
 		this.hall = hall;
-		this.seats = seats;
+		//this.seats = seats;
 	}
 
 	public String getTitle() {
@@ -87,13 +87,13 @@ public class Screening {
 		this.price = price;
 	}
 
-	public List<Seat> getSeats() {
+	/*public List<Seat> getSeats() {
 		return seats;
-	}
+	}*/
 
-	public void setSeats(List<Seat> seats) {
+	/*public void setSeats(List<Seat> seats) {
 		this.seats = seats;
-	}
+	}*/
 
 	@Override
 	public int hashCode() {
@@ -104,7 +104,7 @@ public class Screening {
 		long temp;
 		temp = Double.doubleToLongBits(price);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + ((seats == null) ? 0 : seats.hashCode());
+		//result = prime * result + ((seats == null) ? 0 : seats.hashCode());
 		result = prime * result
 				+ ((startTime == null) ? 0 : startTime.hashCode());
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
@@ -127,11 +127,11 @@ public class Screening {
 		if (Double.doubleToLongBits(price) != Double
 				.doubleToLongBits(other.price))
 			return false;
-		if (seats == null) {
+		/*if (seats == null) {
 			if (other.seats != null)
 				return false;
 		} else if (!seats.equals(other.seats))
-			return false;
+			return false;*/
 		if (startTime == null) {
 			if (other.startTime != null)
 				return false;
@@ -146,11 +146,11 @@ public class Screening {
 	}
 
 	public void setStatus(List<String> seats, Status status) {
-		Set<String> selectedSeats = new HashSet<String>(seats);
+		/*Set<String> selectedSeats = new HashSet<String>(seats);
 		for (Seat seat : getSeats()) {
 			if (selectedSeats.contains(seat.getNumber())) {
 				seat.setStatus(status);
 			}
-		}
+		}*/
 	}
 }
