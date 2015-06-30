@@ -36,6 +36,7 @@ public class UserService implements IUserService {
 	}
 
 	public void addUser(UserProfile user) {
+		user.setPassword(getHashedPassword(user.getPassword()));
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction transaction = em.getTransaction();
 
@@ -44,6 +45,17 @@ public class UserService implements IUserService {
 		transaction.commit();
 
 		em.close();
+	}
+
+	private String getHashedPassword(String password) {
+        try {
+            MessageDigest mda = MessageDigest.getInstance("SHA-512");
+            password = new String(mda.digest(password.getBytes()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return password;
 	}
 
 	public Collection<UserProfile> getAllUsers() {
