@@ -42,6 +42,11 @@ public class UserRestAPI {
 			return ResponseHelper.createResponse(Status.FORBIDDEN, e);
 		}
 	}
+	
+	@GET
+	public Response something() {
+		return ResponseHelper.createResponse(Status.OK);
+	}
 
 	@GET
 	@Path("/{name}")
@@ -50,7 +55,7 @@ public class UserRestAPI {
 		UserProfile user = service.findUser(name);
 
 		if (null == user) {
-			return ResponseHelper.createResponse(Status.NOT_FOUND);
+			return ResponseHelper.createResponse(Status.OK);
 		}
 
 		String json = JsonUtils.toJson(user);

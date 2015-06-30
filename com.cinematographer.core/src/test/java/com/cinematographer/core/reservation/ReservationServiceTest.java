@@ -1,4 +1,4 @@
-package com.cinematographer.core.reservation;
+/*package com.cinematographer.core.reservation;
 
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.containsInAnyOrder;
@@ -163,4 +163,4 @@ public class ReservationServiceTest extends DatabaseTest {
 		Thread.sleep(3000); // wait for the reservation to expire
 		classUnderTest.payReservation(TEST_USERNAMES[0], TEST_TITLES[0]);
 	}
-}
+}*/

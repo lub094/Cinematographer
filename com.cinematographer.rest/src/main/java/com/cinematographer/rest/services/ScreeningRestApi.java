@@ -2,6 +2,7 @@ package com.cinematographer.rest.services;
 
 import static javax.ws.rs.core.Response.Status.INTERNAL_SERVER_ERROR;
 
+import java.nio.file.attribute.UserPrincipal;
 import java.util.Collection;
 
 import javax.ws.rs.Consumes;
@@ -14,10 +15,15 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
+import org.eclipse.persistence.annotations.UnionPartitioning;
+
+import com.cinematographer.core.exceptions.InvalidUserException;
 import com.cinematographer.core.manager.IServiceManager;
 import com.cinematographer.core.manager.ServiceManager;
 import com.cinematographer.core.screening.Screening;
 import com.cinematographer.core.screening.service.IScreeningService;
+import com.cinematographer.core.user.UserProfile;
+import com.cinematographer.core.user.service.IUserService;
 import com.cinematographer.core.utils.JsonUtils;
 import com.cinematographer.rest.utils.ResponseHelper;
 
@@ -27,8 +33,15 @@ import com.cinematographer.rest.utils.ResponseHelper;
 public class ScreeningRestApi {
 
 	@GET
-	public Response getAllScreenings() {
-		// TODO: Validate credentials
+	public Response getAllScreenings(/*UserProfile user*/) {
+		/*IUserService userService = getServiceManager().findService(
+				IUserService.class);
+		try {
+			userService.authenticate(user.getName(), user.getPassword());
+		} catch (InvalidUserException e) {
+			return ResponseHelper.createResponse(Status.UNAUTHORIZED);
+		}*/
+
 		IScreeningService service = getScreeningService();
 		Collection<Screening> screenings = service.getAllScreenings();
 
@@ -56,6 +69,7 @@ public class ScreeningRestApi {
 	}
 
 	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
 	public Response createScreening(String payload) {
 		try {
 			IScreeningService service = getScreeningService();

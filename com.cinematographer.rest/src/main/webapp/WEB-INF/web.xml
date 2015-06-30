@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
-<!--
-    <servlet>
+<!--<servlet>
         <display-name>Cinematographer RESTful Application</display-name>
         <servlet-name>CinematographerRest</servlet-name>
         <init-param>
@@ -11,7 +10,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>com.cinematographer.rest.Bootstrap</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/app/*</url-pattern>
     </servlet-mapping>
 -->
 	<context-param>

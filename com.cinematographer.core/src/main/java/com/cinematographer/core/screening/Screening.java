@@ -16,7 +16,7 @@ public class Screening {
 
 	@Id
 	private String title;
-	private Time startTime;
+	private String startTime;
 	private int duration;
 	private int hall;
 	private double price;
@@ -28,16 +28,16 @@ public class Screening {
 	}
 
 	public Screening(String title, int duration, int hall, List<Seat> seats) {
-		this(title, new Time(System.currentTimeMillis()), duration, hall, 0.0,
+		this(title, ""/*new Time(System.currentTimeMillis())*/, duration, hall, 0.0,
 				seats);
 	}
 
 	public Screening(String title, int duration, int hall) {
-		this(title, new Time(System.currentTimeMillis()), duration, hall, 0.0,
+		this(title, "", duration, hall, 0.0,
 				new ArrayList<Seat>());
 	}
 
-	public Screening(String title, Time startTime, int duration, int hall,
+	public Screening(String title, String startTime, int duration, int hall,
 			double price, List<Seat> seats) {
 		this.title = title;
 		this.startTime = startTime;
@@ -55,11 +55,11 @@ public class Screening {
 		this.title = title;
 	}
 
-	public Time getStartTime() {
+	public String getStartTime() {
 		return startTime;
 	}
 
-	public void setStartTime(Time startTime) {
+	public void setStartTime(String startTime) {
 		this.startTime = startTime;
 	}
 

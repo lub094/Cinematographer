@@ -1,4 +1,4 @@
-package com.cinematographer.core.sceening.manager;
+/*package com.cinematographer.core.sceening.manager;
 
 import static com.cinematographer.core.screening.Status.FREE;
 import static com.cinematographer.core.screening.Status.RESERVED;
@@ -91,3 +91,4 @@ public class ScreeningServiceTest extends DatabaseTest {
 		return emf.createEntityManager();
 	}
 }
+*/

@@ -116,11 +116,11 @@ public class ReservationService implements IReservationService {
 
 	private Map<String, Seat> createSeatsMap(Screening screening) {
 		Map<String, Seat> allSeats = new HashMap<String, Seat>();
-
+/*
 		for (Seat seat : screening.getSeats()) {
 			allSeats.put(seat.getNumber(), seat);
 		}
-
+*/
 		return allSeats;
 	}
 

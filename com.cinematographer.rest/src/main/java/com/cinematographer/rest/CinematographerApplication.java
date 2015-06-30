@@ -6,14 +6,16 @@ import java.util.Set;
 
 import javax.ws.rs.core.Application;
 
+import com.cinematographer.rest.services.ReservationRestAPI;
 import com.cinematographer.rest.services.ScreeningRestApi;
+import com.cinematographer.rest.services.UserRestAPI;
 
 public class CinematographerApplication extends Application {
 
 	@Override
 	@SuppressWarnings("unchecked")
 	public Set<Class<?>> getClasses() {
-		return new HashSet<Class<?>>(Arrays.asList(ScreeningRestApi.class));
+		return new HashSet<Class<?>>(Arrays.asList(ScreeningRestApi.class, UserRestAPI.class, ReservationRestAPI.class));
 	}
 
 }
